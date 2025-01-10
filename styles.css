@@ -20,7 +20,7 @@
 /* colors */
 :root {
     --white: hsl(0, 0%, 100%);
-    --blakc: hsl(0, 0%, 7%);
+    --black: hsl(0, 0%, 7%);
     --purple-100: hsl(254, 88%, 90%);
     --purple-500: hsl(256, 67%, 59%);
     --yellow-100: hsl(31, 66%, 93%);
@@ -31,3 +31,35 @@
 /* attribution */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* common */
+body { background-color: #f5f5f5; padding-top: 32px; padding-bottom: 40px; }
+img { display: block; }
+.inner { max-width: 1120px; margin-inline: 16px; }
+
+/* main */
+.main-conatiner { display: grid; gap: 32px; }
+[class^="item"] { border-radius: 10px; font-weight: 400; color: var(--black); text-wrap: balance; padding: 24px; }
+[class^="item"] .main-title,
+[class^="item"] .item-title { font-weight: 500; }
+[class^="item"] .item-title { font-size: 26px; }
+
+.item01 { background-color: var(--purple-500); color: var(--white); text-align: center;  }
+.item01 .main-title { font-size: 46px; }
+.item01 .main-title .color { color: var(--yellow-500); }
+
+.item02 { background-color: var(--white); }
+
+.item03 { background-color: var(--yellow-500); }
+
+.item04 { background-color: var(--purple-100); text-align: center; }
+
+.item05 { background-color: var(--purple-500); color: var(--white); text-align: center; }
+
+.item06 { background-color: var(--white); }
+
+.item07 { background-color: var(--yellow-100); }
+.item07 .item-title em { color: var(--purple-500); }
+
+.item08 { background-color: var(--yellow-500); }
