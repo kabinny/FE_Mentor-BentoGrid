@@ -1,0 +1,34 @@
+/* typography */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 100 1000;
+    font-display: swap;
+    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 100 1000;
+    font-display: swap;
+    src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('ttf');
+}
+
+* { font-family: 'DM Sans' sans-serif; }
+p { font-size: 18px; }
+
+
+/* colors */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --blakc: hsl(0, 0%, 7%);
+    --purple-100: hsl(254, 88%, 90%);
+    --purple-500: hsl(256, 67%, 59%);
+    --yellow-100: hsl(31, 66%, 93%);
+    --yellow-500: hsl(39, 100%, 71%);
+}
+
+
+/* attribution */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
