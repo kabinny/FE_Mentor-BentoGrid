@@ -4,17 +4,15 @@
     font-style: normal;
     font-weight: 100 1000;
     font-display: swap;
-    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('ttf');
+    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
 }
 @font-face {
     font-family: 'DM Sans';
     font-style: italic;
     font-weight: 100 1000;
     font-display: swap;
-    src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('ttf');
+    src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
 }
-
-* { font-family: 'DM Sans' sans-serif; }
 
 
 /* colors */
@@ -35,19 +33,21 @@
 
 /* common */
 body { background-color: #f5f5f5; padding-top: 32px; padding-bottom: 40px; }
-img { display: block; }
-.inner { max-width: 1120px; margin-inline: 16px; }
+img { display: block; max-width: 100%; height: auto; }
+.inner { width: 100%; max-width: 1120px; margin-inline: 16px; }
 
 /* main */
-.main-container { display: grid; gap: 32px; }
-[class^="item"] { border-radius: 10px; font-weight: 400; color: var(--black); text-wrap: balance; padding: 24px; }
-[class^="item"] .main-title,
-[class^="item"] .item-title { font-weight: 500; }
-[class^="item"] .item-title { font-size: 26px; }
+.main-container { display: grid; column-gap: 32px; row-gap: 30px; width: 100%; margin-bottom: 40px; }
+[class^="item0"] { border-radius: 10px; font-weight: 400; color: var(--black); text-wrap: balance; padding: 24px; overflow: hidden; }
+[class^="item0"] .main-title,
+[class^="item0"] .item-title { font-weight: 500; }
+[class^="item0"] .item-title { font-size: 26px; line-height: 1.1; }
+.main-container p { font-family: 'DM Sans', sans-serif; }
 
 .item01 { background-color: var(--purple-500); color: var(--white); text-align: center;  }
-.item01 .main-title { font-size: 46px; }
+.item01 .main-title { font-size: 62px; }
 .item01 .main-title .color { color: var(--yellow-500); }
+.item01 img { margin: 20px auto 10px; max-width: 188px; }
 
 .item02 { background-color: var(--white); }
 
@@ -66,14 +66,30 @@ img { display: block; }
 
 
 /* responsive */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+    .inner { margin-inline: auto; }
     .main-container { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(10, 60px); }
-    .item01 { grid-row: 1 / span 4; grid-column: 2 / span 2; }
+    .item01 { grid-row: 1 / span 4; grid-column: 2 / span 2; padding-top: 60px; }
+    .item01 .main-title em { font-style: italic; }
     .item02 { grid-row: 5 / span 3; grid-column: 2 / span 1; }
+    .item02 img { max-width: unset; width: 316px; margin-bottom: 18px; }
     .item03 { grid-row: 5 / span 3; grid-column: 3 / span 1; }
-    .item04 { grid-row: 1 / span 7; grid-column: 4 / span 1; }
-    .item05 { grid-row: 7 / span 3; grid-column: 3 / span 2; }
-    .item06 { grid-row: 7 / span 3; grid-column: 2 / span 1; }
-    .item07 { grid-row: 1 / span 5; grid-column: 1 / span 1; }
-    .item08 { grid-row: 6 / span 5; grid-column: 1 / span 1; }
+    .item03 .item-title { margin-bottom: 12px; }
+    .item04 { grid-row: 1 / span 7; grid-column: 4 / span 1; padding-top: 48px; }
+    .item04 .item-title { font-size: 32px; line-height: 1; margin-bottom: 18px; }
+    .item04 img { max-width: unset; width: 357px; margin-bottom: 28px; }
+    .item04 .sub-text { text-align: left; line-height: 1.2; }
+    .item05 { grid-row: 8 / span 3; grid-column: 3 / span 2; display: flex; gap: 16px; align-items: center; }
+    .item05 img { width: 226px; }
+    .item05 .item-title { font-size: 36px; text-align: left; }
+    .item06 { grid-row: 8 / span 3; grid-column: 2 / span 1; }
+    .item06 .sub-text { margin-bottom: 40px; }
+    .item06 .sub-text .em { display: block; font-weight: 500; font-size: 60px; margin-bottom: 20px; }
+    .item06 img { max-width: 179px; }
+    .item07 { grid-row: 1 / span 5; grid-column: 1 / span 1; padding-top: 76px; }
+    .item07 .item-title { font-size: 38px; line-height: 1; margin-bottom: 20px; }
+    .item07 .item-title em { font-style: italic; }
+    .item07 img { max-width: 191px; }
+    .item08 { grid-row: 6 / span 5; grid-column: 1 / span 1; padding-right: 10px; }
+    .item08 .item-title { font-size: 38px; line-height: 1; margin-bottom: 44px; }
 }
