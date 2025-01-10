@@ -63,3 +63,17 @@ img { display: block; }
 .item07 .item-title em { color: var(--purple-500); }
 
 .item08 { background-color: var(--yellow-500); }
+
+
+/* responsive */
+@media (min-width: 768px) {
+    .main-conatiner { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(10, 60px); }
+    .item01 { grid-row: 1 / span 4; grid-column: 2 / span 2; }
+    .item02 { grid-row: 5 / span 3; grid-column: 2 / span 1; }
+    .item03 { grid-row: 5 / span 3; grid-column: 3 / span 1; }
+    .item04 { grid-row: 1 / span 7; grid-column: 4 / span 1; }
+    .item05 { grid-row: 7 / span 3; grid-column: 3 / span 2; }
+    .item06 { grid-row: 7 / span 3; grid-column: 2 / span 1; }
+    .item07 { grid-row: 1 / span 5; grid-column: 1 / span 1; }
+    .item08 { grid-row: 6 / span 5; grid-column: 1 / span 1; }
+}
